@@ -1,0 +1,25 @@
+           <div class="box-j">     <!--热门景点部分-->
+				<div class="box-h-j">  
+					<p>－－热门景点－－</p>
+				</div>
+				<ul class="box-j-x"> 
+					<li class="box-x-1">
+						<img src="img/j2.jpg">
+						<span>赤水湾古镇</span>
+						<p>赤水湾古镇，坐落在太行山东麓、涉县中原村清河畔，太行山深处的“不夜城”。</p>
+					</li>
+					<li class="box-x-1 box-x-2">
+						<img src="img/j1.jpg">
+						<span class="wenz">娲皇宫</span>
+						<p class="wenz2">娲皇宫位于邢台市西南约45公里处，主峰海拔1089米，孤峰接天，高耸入云，有“雷
+							鸣阳光下，雨起半山间”之说。</p>
+					</li>
+					<li class="box-x-1">
+						<img src="img/j3.jpg">
+						<span>京娘湖</span>
+						<p>京娘湖位于河北省邯郸市武安市西北部山区的口上村北，亦称
+							口上水库，有“太行三峡”之称。</p>
+					</li>
+				</ul>
+			</div>
+
