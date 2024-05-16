@@ -1,0 +1,159 @@
+@-webkit-keyframes shake {
+			  0% {
+			    left: -3px;
+			    top: 3px;
+			  }
+			  20% {
+			    left: 3px;
+			    top: -3px;
+			  }
+			  40% {
+			    left: 3px;
+			    top: 3px;
+			  }
+			  60% {
+			    left: -3px;
+			    top: -3px;
+			  }
+			  80% {
+			    left: 3px;
+			    top: 3px;
+			  }
+			  100% {
+			    left: 0;
+			    top: 0px;
+			  }
+			}
+			@keyframes shake {
+			  0% {
+			    left: -3px;
+			    top: 3px;
+			  }
+			  20% {
+			    left: 3px;
+			    top: -3px;
+			  }
+			  40% {
+			    left: 3px;
+			    top: 3px;
+			  }
+			  60% {
+			    left: -3px;
+			    top: -3px;
+			  }
+			  80% {
+			    left: 3px;
+			    top: 3px;
+			  }
+			  100% {
+			    left: 0;
+			    top: 0px;
+			  }
+			}
+			#app.pressed {
+			  -webkit-animation: shake 0.1s forwards;
+			          animation: shake 0.1s forwards;
+			}
+			
+			.game_intro {
+			  background: rgba(14, 3, 13, 0.94);
+			  width: 100%;
+			  height: 100%;
+			  position: fixed;
+			  z-index: 99;
+			  transition: all 0.3s;
+			}
+			.game_intro.gamestarted {
+			  opacity: 0;
+			  pointer-events: none;
+			}
+			.game_intro__inner {
+			  position: absolute;
+			  left: 0;
+			  right: 0;
+			  margin: auto;
+			  top: 50%;
+			  width: 680px;
+			  transform: translateY(-50%);
+			  text-align: center;
+			  transition: all 0.3s;
+			  font-size: 12px;
+			  line-height: 30px;
+			}
+			.game_intro__inner .begin {
+			  text-align: center;
+			  margin-top: 80px;
+			  cursor: pointer;
+			  transition: all 0.3s;
+			}
+			.game_intro__inner .begin:hover {
+			  color: #76ece2;
+			}
+			.game_intro__inner .dialogue {
+			  float: left;
+			  width: 60%;
+			  background: black;
+			  color: white;
+			  border-radius: 20px;
+			  padding: 20px 31px;
+			  position: relative;
+			}
+			.game_intro__inner p {
+			  text-align: left;
+			  clear: both;
+			}
+			.game_intro__inner span {
+			  display: block;
+			  color: #76ece2;
+			  font-size: 9px;
+			  text-align: left;
+			  margin-bottom: -11px;
+			  text-transform: uppercase;
+			}
+			.game_intro__inner .king {
+			  float: right;
+			  width: 140px !important;
+			}
+			.game_intro__inner.start {
+			  transition: all 1s;
+			}
+			.game_intro__inner.start.gamestarted {
+			  opacity: 0;
+			  pointer-events: none;
+			}
+			.game_intro__inner .continue {
+			  position: absolute;
+			  z-index: 1;
+			  cursor: pointer;
+			  right: 20px;
+			  font-size: 10px;
+			  top: 175px;
+			  transition: all 0.3s;
+			}
+			.game_intro__inner .continue:hover {
+			  color: #76ece2;
+			}
+			.game_intro__inner.end {
+			  opacity: 1;
+			  pointer-events: all;
+			  transition: all 1s 1s;
+			}
+			.game_intro__inner.end .continue {
+			  opacity: 1;
+			  transition: all 0.3s 6s;
+			}
+			.game_intro__inner.end.gamestarted {
+			  opacity: 0;
+			}
+			.game_intro__inner.end.gamestarted .continue {
+			  opacity: 0;
+			}
+			.game_intro__inner.gamestarted {
+			  pointer-events: none;
+			}
+			.game_intro__inner img:nth-of-type(1) {
+			  width: 400px;
+			  -ms-interpolation-mode: nearest-neighbor;
+			      image-rendering: -moz-crisp-edges;
+			      image-rendering: pixelated;
+			}
