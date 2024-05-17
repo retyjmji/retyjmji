@@ -1,0 +1,117 @@
+audioArray: [
+		        {
+		          name: "swordHit1",
+		          source: "https://assets.codepen.io/217233/ktkSwordHit1.mp3",
+		          stackSize: 10
+		        },
+		        {
+		          name: "swordHit2",
+		          source: "https://assets.codepen.io/217233/ktkSwordHit2.mp3",
+		          stackSize: 10
+		        },
+		        {
+		          name: "swordHit3",
+		          source: "https://assets.codepen.io/217233/ktkSwordHit3.mp3",
+		          stackSize: 10
+		        },
+		        {
+		          name: "death1",
+		          source:
+		            "https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/ktkDeath1.mp3",
+		          stackSize: 10
+		        },
+		        {
+		          name: "death2",
+		          source:
+		            "https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/ktkDeath2.mp3",
+		          stackSize: 10
+		        },
+		        {
+		          name: "death3",
+		          source:
+		            "https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/ktkDeath3.mp3",
+		          stackSize: 10
+		        },
+		        {
+		          name: "death4",
+		          source:
+		            "https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/ktkDeath4.mp3",
+		          stackSize: 10
+		        },
+		        {
+		          name: "grunt1",
+		          source: "https://assets.codepen.io/217233/ktkGrunt1.mp3",
+		          stackSize: 10
+		        },
+		        {
+		          name: "grunt2",
+		          source: "https://assets.codepen.io/217233/ktkGrunt2.mp3",
+		          stackSize: 10
+		        },
+		        {
+		          name: "grunt3",
+		          source: "https://assets.codepen.io/217233/ktkGrunt3.mp3",
+		          stackSize: 10
+		        },
+		        {
+		          name: "grunt4",
+		          source: "https://assets.codepen.io/217233/ktkGrunt4.mp3",
+		          stackSize: 10
+		        },
+		        {
+		          name: "grunt5",
+		          source: "https://assets.codepen.io/217233/ktkGrunt5.mp3",
+		          stackSize: 10
+		        },
+		        {
+		          name: "grunt6",
+		          source: "https://assets.codepen.io/217233/ktkGrunt6.mp3",
+		          stackSize: 10
+		        },
+		        {
+		          name: "grunt7",
+		          source: "https://assets.codepen.io/217233/ktkGrunt7.mp3",
+		          stackSize: 10
+		        },
+		        {
+		          name: "grunt8",
+		          source: "https://assets.codepen.io/217233/ktkGrunt8.mp3",
+		          stackSize: 10
+		        },
+		        {
+		          name: "grunt9",
+		          source: "https://assets.codepen.io/217233/ktkGrunt9.mp3",
+		          stackSize: 10
+		        },
+		        {
+		          name: "bgmusic",
+		          source: "https://assets.codepen.io/217233/ktkBgAudio.mp3"
+		        },
+		        {
+		          name: "shopBell",
+		          source: "https://assets.codepen.io/217233/ktkBell.wav"
+		        },
+		        {
+		          name: "shopWoosh",
+		          source: "https://assets.codepen.io/217233/ktkWoosh.wav"
+		        },
+		        {
+		          name: "upgrade",
+		          source: "https://assets.codepen.io/217233/ktkUpgrade.mp3",
+		          stackSize: 10
+		        },
+		        {
+		          name: "hover",
+		          source: "https://assets.codepen.io/217233/ktkHover.mp3",
+		          stackSize: 10
+		        },
+		        {
+		          name: "crushyou",
+		          source: "https://assets.codepen.io/217233/crush+you.wav",
+		          stackSize: 1
+		        },
+		        {
+		          name: "neverstop",
+		          source: "https://assets.codepen.io/217233/neverstop.wav",
+		          stackSize: 1
+		        },
