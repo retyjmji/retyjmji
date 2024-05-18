@@ -1,0 +1,9 @@
+QObject::connect(webView, &QWebEngineView::loadFinished, [=](bool success){
+    if (success) {
+        qDebug() << "Web page loaded successfully.";
+        // 执行加载成功后的操作，例如隐藏进度条、启用UI元素等
+    } else {
+        qDebug() << "Failed to load web page!";
+        // 执行加载失败后的操作，例如显示错误信息、尝试重新加载等
+    }
+});
