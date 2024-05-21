@@ -1,0 +1,12 @@
+// http.js
+import axios from 'axios';
+
+const httpPlugin = {
+  install(Vue) {
+    Vue.prototype.$http = axios.create({
+      baseURL: 'https://api.example.com',
+    });
+  },
+};
+
+export default httpPlugin;
