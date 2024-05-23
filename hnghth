@@ -1,0 +1,146 @@
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+ 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Objects;
+ 
+ 
+public class Emp {
+    private int id;
+    private String username;
+    private String password;
+    private String name;
+    private int gender;
+    private int job;
+    private LocalDate entrydate;
+    private int deptId;
+    private LocalDateTime createTime;
+    private LocalDateTime updateTime;
+ 
+    public Emp() {
+    }
+ 
+    public Emp(int id, String username, String password, String name, int gender, int job, LocalDate entrydate, int deptId, LocalDateTime createTime, LocalDateTime updateTime) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.name = name;
+        this.gender = gender;
+        this.job = job;
+        this.entrydate = entrydate;
+        this.deptId = deptId;
+        this.createTime = createTime;
+        this.updateTime = updateTime;
+    }
+ 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Emp emp = (Emp) o;
+        return id == emp.id && gender == emp.gender && job == emp.job && deptId == emp.deptId && Objects.equals(username, emp.username) && Objects.equals(password, emp.password) && Objects.equals(name, emp.name) && Objects.equals(entrydate, emp.entrydate) && Objects.equals(createTime, emp.createTime) && Objects.equals(updateTime, emp.updateTime);
+    }
+ 
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, username, password, name, gender, job, entrydate, deptId, createTime, updateTime);
+    }
+ 
+    public int getId() {
+        return id;
+    }
+ 
+    public void setId(int id) {
+        this.id = id;
+    }
+ 
+    public String getUsername() {
+        return username;
+    }
+ 
+    public void setUsername(String username) {
+        this.username = username;
+    }
+ 
+    public String getPassword() {
+        return password;
+    }
+ 
+    public void setPassword(String password) {
+        this.password = password;
+    }
+ 
+    public String getName() {
+        return name;
+    }
+ 
+    public void setName(String name) {
+        this.name = name;
+    }
+ 
+    public int getGender() {
+        return gender;
+    }
+ 
+    public void setGender(int gender) {
+        this.gender = gender;
+    }
+ 
+    public int getJob() {
+        return job;
+    }
+ 
+    public void setJob(int job) {
+        this.job = job;
+    }
+ 
+    public LocalDate getEntrydate() {
+        return entrydate;
+    }
+ 
+    public void setEntrydate(LocalDate entrydate) {
+        this.entrydate = entrydate;
+    }
+ 
+    public int getDeptId() {
+        return deptId;
+    }
+ 
+    public void setDeptId(int deptId) {
+        this.deptId = deptId;
+    }
+ 
+    public LocalDateTime getCreateTime() {
+        return createTime;
+    }
+ 
+    public void setCreateTime(LocalDateTime createTime) {
+        this.createTime = createTime;
+    }
+ 
+    public LocalDateTime getUpdateTime() {
+        return updateTime;
+    }
+ 
+    public void setUpdateTime(LocalDateTime updateTime) {
+        this.updateTime = updateTime;
+    }
+ 
+    @Override
+    public String toString() {
+        return "Emp{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", name='" + name + '\'' +
+                ", gender=" + gender +
+                ", job=" + job +
+                ", entrydate=" + entrydate +
+                ", deptId=" + deptId +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                '}';
+    }
+}
