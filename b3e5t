@@ -1,0 +1,27 @@
+CSVRecord [comment='null', recordNumber=1, values=[1, 张 三, 男]]
+CSVRecord [comment='null', recordNumber=2, values=[2, 李四 , 女]]
+CSVRecord [comment='null', recordNumber=3, values=[3, 王五, 男]]
+CSVRecord [comment='null', recordNumber=4, values=[4, , 男]]
+CSVRecord [comment='null', recordNumber=5, values=[5, 王五, ]]
+CSVRecord [comment='null', recordNumber=6, values=[3, , 男]]
+User(id=1, name=张 三, gender=男)
+User(id=2, name=李四 , gender=女)
+User(id=3, name=王五, gender=男)
+User(id=4, name=, gender=男)
+User(id=5, name=王五, gender=)
+User(id=3, name=, gender=男)
+==========================
+CSVRecord [comment='null', recordNumber=1, values=[1, 张 三, 男]]
+CSVRecord [comment='null', recordNumber=2, values=[2, 李四, 女]]
+CSVRecord [comment='null', recordNumber=3, values=[3, 王五, 男]]
+CSVRecord [comment='null', recordNumber=4, values=[4, , 男]]
+CSVRecord [comment='null', recordNumber=5, values=[5, 王五, ]]
+CSVRecord [comment='null', recordNumber=6, values=[3, , 男]]
+User(id=1, name=张 三, gender=男)
+User(id=2, name=李四, gender=女)
+User(id=3, name=王五, gender=男)
+User(id=4, name=, gender=男)
+User(id=5, name=王五, gender=)
+User(id=3, name=, gender=男)
+
+Process finished with exit code 0
