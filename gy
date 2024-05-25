@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>案例</title>
+    <style>
+        div {
+            width: 300px;
+            height: 100px;
+            background-color: #D5E8D4;
+            border: 1px solid #82B366;
+        }
+        .box{
+          background-color: #F5F5F5;
+          border: 1px solid #FF0818;
+          margin-top: 20px;
+          margin-bottom: 20px;/*两个盒子水平距离等于左边盒子的margin-right加上右边盒子的margin-left*/
+        }           /*两个盒子垂直距离等于上边盒子的margin-bottom和下边盒子的margin-top两者的较大值，因此我们通常设置上边盒子的margin-bottom*/
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <div class="box"></div>
+    <div></div>
+</body>
+
+</html>
