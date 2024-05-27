@@ -1,0 +1,14 @@
+[HttpDelete]
+public async Task<IActionResult> DelStaff(int id)
+{
+    var staff = await _context.Staff.FindAsync(id); // 找到id相同的数据
+​
+    if (staff is null)
+        return NotFound("找不到该员工。");
+​
+    _context.Staff.Remove(staff);
+​
+    await _context.SaveChangesAsync();
+​
+    return Ok("删除成功！");
+}
