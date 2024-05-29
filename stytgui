@@ -1,0 +1,15 @@
+// Express 示例
+const express = require('express');
+const app = express();
+ 
+// 设置允许跨域请求的域名和允许携带 Cookie
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'https://example.com');
+  res.header('Access-Control-Allow-Credentials', 'true');
+  next();
+});
+ 
+// 处理其他路由或请求
+// ...
+ 
+app.listen(3000);
