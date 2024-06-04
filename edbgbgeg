@@ -1,0 +1,8 @@
+# 如果拉不动的话加个代理
+docker pull ghcr.dockerproxy.com/open-webui/open-webui:main
+
+# 重命名镜像（如果是通过代理下载的）
+docker tag ghcr.dockerproxy.com/open-webui/open-webui:main ghcr.io/open-webui/open-webui:main
+
+# 删除代理镜像（如果是通过代理下载的）
+docker rmi ghcr.dockerproxy.com/open-webui/open-webui:main
