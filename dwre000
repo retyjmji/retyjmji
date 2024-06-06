@@ -1,0 +1,8 @@
+@Configuration
+public class CacheConfig {
+    @Bean
+    @ConditionalOnMissingBean(CacheManager.class)
+    public CacheManager cacheManager() {
+        // 创建自定义的 CacheManager 对象
+    }
+}
