@@ -1,0 +1,17 @@
+  if (refStartRowId != -1) startRowID = refStartRowId;
+                    if (refCopyRowId != -1) copyRowID = refCopyRowId;
+                    for (int i = (HasTitle == true ? 1 : 0); i < ReaderData.GetLength(0); i++)
+                    {
+                        if (startRowID>tb.Rows.Count-1) break;
+                        for (int j = 0; j < ReaderData.GetLength(1); j++)
+                        {
+                            if (j > tb.Rows[copyRowID].Cells.Count - 1) break;
+                            HtmlTableCell td = tb.Rows[startRowID].Cells[j];
+                            if (td.Attributes["ByHTML"] == null)
+                            {
+                                td.InnerText = ReaderData[i, j].ToString();
+                            }
+                            else
+                            {
+                                td.InnerHtml = allowToHTML == true ? (ReaderData[i, j].ToString()) : ReaderData[i, j].ToString();;
+                            }
