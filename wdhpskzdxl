@@ -1,0 +1,15 @@
+
+    <image  class="replyUserHead" src="{{imgUrl}}/upload/20220608/jocker.jpg" lazy-load="true"></image>
+    <view class="rightUserName">
+      <view class="userName little">橘猫大侠</view>
+      <view class="starBox">
+        <image src="{{imgUrl}}/upload/20220608/star5.png" class="starImg">
+        </image>
+      </view>
+    </view>
+  </view>
+  <view class="replyContet littleTwo">
+    味道好，配送快，值得信赖！
+  </view>
+</view> 
+
