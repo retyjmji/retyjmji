@@ -1,0 +1,85 @@
+        # 绘制砖块、冰块和动物  
+        brick_group = pygame.sprite.Group()  
+        animal_group = pygame.sprite.Group()  
+        ice_group = pygame.sprite.Group()  
+        for i in range(0, 21):  
+            for j in range(0, 21):  
+                x, y = Manager.rc_xy(i, j)  
+                if self.animal[i][j] != -1:  
+                    brick_group.add(Element(Element.brick, (x, y)))  
+                    animal_group.add(Element(Element.animals[self.animal[i][j]], (x, y)))  
+                if self.ice_list[i][j] != -1:  
+                    ice_group.add(Element(Element.ice, (x, y)))  
+        brick_group.draw(self.screen)  
+        ice_group.draw(self.screen)  
+        for animal_list in animal_group:  
+            self.screen.blit(animal_list.image, animal_list.rect)  
+        if self.level == 1:  
+            self.draw_task(10, 4)  
+        elif self.level == 2:  
+            self.draw_task(21, 1)  
+        elif self.level == 3:  
+            self.draw_task(16, 4, (300, 90), (330, 35), (360, 60))  
+            self.draw_task(16, 5, (500, 90), (530, 35), (560, 60))  
+        elif self.level == 4:  
+            self.draw_task(18, 5, (300, 90), (330, 35), (360, 60))  
+            self.draw_task(18, 2, (500, 90), (530, 35), (560, 60))  
+        elif self.level == 5:  
+            self.draw_task(28, 2, (300, 90), (330, 35), (360, 60))  
+            self.draw_task(28, 0, (500, 90), (530, 35), (560, 60))  
+        elif self.level == 6:  
+            self.draw_task(70, 4)  
+        elif self.level == 7:  
+            self.draw_task(36, 1)  
+            self.draw_task(36, 2, (300, 90), (330, 35), (360, 60))  
+            self.draw_task(36, 0, (500, 90), (530, 35), (560, 60))  
+        elif self.level == 8:  
+            self.draw_task(15, 6)  
+        elif self.level == 9:  
+            self.draw_task(49, 6)  
+        else:  
+            self.draw_task(39, 6)  
+  
+        # 显示选择的动物  
+        if self.selected != [-1, -1]:  
+            frame_sprite = Element(Element.frame, Manager.rc_xy(self.selected[0], self.selected[1]))  
+            self.screen.blit(frame_sprite.image, frame_sprite.rect)  
+  
+        # 显示得分  
+        self.load_text('得分:' + str(self.score), (300, 550), 30)  
+        pygame.draw.rect(self.screen, (50, 150, 50, 180), Rect(300, 570, self.score * 2, 25))  
+        pygame.draw.rect(self.screen, (100, 200, 100, 180), Rect(300, 570, 200, 25), 2)  
+        return animal_group  
+  
+    def mouse_image(self):  
+        # 加载鼠标图片  
+        mouse_cursor = pygame.image.load(os.path.join(img_basic, 'mouse.png')).convert_alpha()  
+        mouse_x, mouse_y = pygame.mouse.get_pos()  
+        # 计算鼠标左上角位置  
+        mouse_x -= moushfe_cursor.get_width() / 2  
+        mouse_y -= mouse_cursor.get_height() / 2  
+        # 绘制鼠标图片  
+        self.screen.blit(mouse_cursor, (mouse_x, mouse_y))  
+  
+    def mouse_select(self, mousex, mousey):  
+        if self.type == 1:  # 已通关  
+            if Board.button_position[0][0] < mousex < Board.button_position[0][0] + 100 \  
+                    and Board.button_position[0][1] - 50 < mousey < Board.button_position[0][  
+                1]:  # 点击重玩按钮  
+                if self.energy_num < 5:  
+                    self.level = 0  
+                self.reset_mode = True  
+            elif Board.button_position[1][0] < mousex < Board.button_position[1][0] + 100 \  
+                    and Board.button_position[1][1] - 50 < mousey < Board.button_position[1][  
+                1]:  # 点击下一关按钮  
+                if self.level < 10:  
+                    if self.energy_num < 5:  
+                        self.level = 0  
+                    else:  
+                        self.level += 1  
+                    self.reset_mode = True  
+            elif 610 < mousex < 610 + 55 and 205 - 55 < mousey < 205:  # x  
+                self.level = 0  
+                self.reset_mode = True  
+  
+g
